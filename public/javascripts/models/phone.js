@@ -1,1 +1,3 @@
-Phone = Backbone.Model;
+Phone = Backbone.Model.extend({
+    urlRoot: '/api/phones'
+});
