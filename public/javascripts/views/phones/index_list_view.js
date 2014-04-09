@@ -23,6 +23,7 @@ PhonesIndexListView = Backbone.View.extend({
         var position = this.filtered_collection.indexOf(phone);
         this.phoneView = new PhonesIndexListPhoneView({
             tagName: 'li',
+            className: 'thumbnail',
             model: phone
         });
 

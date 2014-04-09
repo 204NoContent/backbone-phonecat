@@ -26,11 +26,17 @@ return __p;
 window.JST["phones/index_list_phone"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+=''+
+__p+='<a href="/phones/'+
+((__t=( get('id') ))==null?'':_.escape(__t))+
+'" class=\'thumb\'><img src="'+
+((__t=( '/' + get('imageUrl') ))==null?'':_.escape(__t))+
+'"></a>\n<a href="/phones/'+
+((__t=( get('id') ))==null?'':_.escape(__t))+
+'">'+
 ((__t=( get('name') ))==null?'':_.escape(__t))+
-'\n<p>'+
+'</a>\n<p>'+
 ((__t=( get('snippet') ))==null?'':_.escape(__t))+
-'</p>\n';
+'</p>';
 }
 return __p;
 };
