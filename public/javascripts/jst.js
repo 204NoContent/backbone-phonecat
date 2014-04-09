@@ -40,3 +40,12 @@ __p+='<a href="/phones/'+
 }
 return __p;
 };
+window.JST["phones/show"] = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='TBD: detail view for '+
+((__t=( get('id') ))==null?'':_.escape(__t))+
+'\n';
+}
+return __p;
+};
