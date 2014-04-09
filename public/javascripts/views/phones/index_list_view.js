@@ -4,7 +4,7 @@ PhonesIndexListView = Backbone.View.extend({
         this.filtered_collection = new PhonesCollection();
         this.listenTo(this.filtered_collection, 'add', this.renderPhone);
 
-        this.render();
+        this.listenTo(this.collection, 'sync', this.render);
 
         this.listenTo(this.model, 'change:sortBy', this.rerender);
         this.listenTo(this.model, 'change:query', this.render);

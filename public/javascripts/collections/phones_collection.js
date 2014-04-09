@@ -1,6 +1,8 @@
 PhonesCollection = Backbone.Collection.extend({
     model: Phone,
 
+    url: '/api/phones',
+
     query: function (query) {
         if (!query || query === '') return this.models;
         return this.filter(function (phone) {
