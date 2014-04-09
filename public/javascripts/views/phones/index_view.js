@@ -4,11 +4,14 @@ PhonesIndexView = Backbone.View.extend({
         this.filter = new Filter();
         this.collection = new PhonesCollection([
             {'name': 'Nexus S',
-             'snippet': 'Fast just got faster with Nexus S.'},
+             'snippet': 'Fast just got faster with Nexus S.',
+             'age': 1},
             {'name': 'Motorola XOOM™ with Wi-Fi',
-             'snippet': 'The Next, Next Generation tablet.'},
+             'snippet': 'The Next, Next Generation tablet.',
+             'age': 2},
             {'name': 'MOTOROLA XOOM™',
-             'snippet': 'The Next, Next Generation tablet.'}
+             'snippet': 'The Next, Next Generation tablet.',
+             'age': 3}
         ]);
 
         this.render();

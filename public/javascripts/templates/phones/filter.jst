@@ -1,2 +1,8 @@
 Search: 
 <input class='query'>
+Sort by: 
+<select class='sort'>
+    [[ _.each(order_options, function (option) { ]]
+        <option value="[[= option.value ]]" [[= option.selected ? 'selected': '']]>[[= option.text ]]</option>
+    [[ }) ]]
+</select>

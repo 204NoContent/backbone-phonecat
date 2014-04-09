@@ -2,7 +2,17 @@ window.JST = {};
 window.JST["phones/filter"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='Search: \n<input class=\'query\'>\n';
+__p+='Search: \n<input class=\'query\'>\nSort by: \n<select class=\'sort\'>\n    ';
+ _.each(order_options, function (option) { 
+__p+='\n        <option value="'+
+((__t=( option.value ))==null?'':_.escape(__t))+
+'" '+
+((__t=( option.selected ? 'selected': ''))==null?'':_.escape(__t))+
+'>'+
+((__t=( option.text ))==null?'':_.escape(__t))+
+'</option>\n    ';
+ }) 
+__p+='\n</select>\n';
 }
 return __p;
 };
