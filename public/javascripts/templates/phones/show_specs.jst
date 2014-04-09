@@ -1,0 +1,112 @@
+<li>
+    <span>Availability and Networks</span>
+    <dl>
+        <dt>Availability</dt>
+        <dd>[[= get('availability') ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Battery</span>
+    <dl>
+        <dt>Type</dt>
+        <dd>[[= get('battery').type ]]</dd>
+        <dt>Talk Time</dt>
+        <dd>[[= get('battery').talkTime ]]</dd>
+        <dt>Standby time (max)</dt>
+        <dd>[[= get('battery').standbyTime ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Storage and Memory</span>
+    <dl>
+        <dt>RAM</dt>
+        <dd>[[= get('storage').ram ]]</dd>
+        <dt>Internal Storage</dt>
+        <dd>[[= get('storage').flash ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Connectivity</span>
+    <dl>
+        <dt>Network Support</dt>
+        <dd>[[= get('connectivity').cell ]]</dd>
+        <dt>WiFi</dt>
+        <dd>[[= get('connectivity').wifi ]]</dd>
+        <dt>Bluetooth</dt>
+        <dd>[[= get('connectivity').bluetooth ]]</dd>
+        <dt>Infrared</dt>
+        <dd>[[= get('connectivity').infrared ]]</dd>
+        <dt>GPS</dt>
+        <dd>[[= get('connectivity').gps ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Android</span>
+    <dl>
+        <dt>OS Version</dt>
+        <dd>[[= get('android').os ]]</dd>
+        <dt>UI</dt>
+        <dd>[[= get('android').ui ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Size and Weight</span>
+    <dl>
+        <dt>Dimensions</dt>
+        [[ _.each(get('sizeAndWeight').dimensions, function(dimension) { ]]
+            <dd>[[= dimension ]]</dd>
+        [[ }) ]]
+        <dt>Weight</dt>
+        <dd>[[= get('sizeAndWeight').weight ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Display</span>
+    <dl>
+        <dt>Screen size</dt>
+        <dd>[[= get('display').screenSize ]]</dd>
+        <dt>Screen resolution</dt>
+        <dd>[[= get('display').screenResolution ]]</dd>
+        <dt>Touch screen</dt>
+        <dd>[[= get('display').touchScreen ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Hardware</span>
+    <dl>
+        <dt>CPU</dt>
+        <dd>[[= get('hardware').cpu ]]</dd>
+        <dt>USB</dt>
+        <dd>[[= get('hardware').usb ]]</dd>
+        <dt>Audio / headphone jack</dt>
+        <dd>[[= get('hardware').audioJack ]]</dd>
+        <dt>FM Radio</dt>
+        <dd>[[= get('hardware').fmRadio ]]</dd>
+        <dt>Accelerometer</dt>
+        <dd>[[= get('hardware').accelerometer ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Camera</span>
+    <dl>
+        <dt>Primary</dt>
+        <dd>[[= get('camera').primary ]]</dd>
+        <dt>Features</dt>
+        <dd>[[= get('camera').features.join(', ') ]]</dd>
+    </dl>
+</li>
+
+<li>
+    <span>Additional Features</span>
+    <dd>[[= get('additionalFeatures') ]]</dd>
+</li>
+
+<li></li>

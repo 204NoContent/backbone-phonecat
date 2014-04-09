@@ -8,5 +8,20 @@ PhonesShowView = Backbone.View.extend({
 
     render: function () {
         this.$el.html(JST['phones/show'](this.model));
+
+        new PhonesShowImageView({
+            el: this.$('.phone-images'),
+            model: this.model
+        });
+
+        new PhonesShowImagesListView({
+            el: this.$('ul.phone-thumbs'),
+            model: this.model
+        });
+
+        new PhonesShowSpecsView({
+            el: this.$('ul.specs'),
+            model: this.model
+        });
     }
 });
