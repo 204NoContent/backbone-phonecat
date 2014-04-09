@@ -91,9 +91,9 @@ __p+='<li>\n    <span>Availability and Networks</span>\n    <dl>\n        <dt>Av
 '</dd>\n        <dt>Bluetooth</dt>\n        <dd>'+
 ((__t=( get('connectivity').bluetooth ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>Infrared</dt>\n        <dd>'+
-((__t=( get('connectivity').infrared ))==null?'':_.escape(__t))+
+((__t=( PhonesHelper.checkmark(get('connectivity').infrared) ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>GPS</dt>\n        <dd>'+
-((__t=( get('connectivity').gps ))==null?'':_.escape(__t))+
+((__t=( PhonesHelper.checkmark(get('connectivity').gps) ))==null?'':_.escape(__t))+
 '</dd>\n    </dl>\n</li>\n\n<li>\n    <span>Android</span>\n    <dl>\n        <dt>OS Version</dt>\n        <dd>'+
 ((__t=( get('android').os ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>UI</dt>\n        <dd>'+
@@ -111,7 +111,7 @@ __p+='\n        <dt>Weight</dt>\n        <dd>'+
 '</dd>\n        <dt>Screen resolution</dt>\n        <dd>'+
 ((__t=( get('display').screenResolution ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>Touch screen</dt>\n        <dd>'+
-((__t=( get('display').touchScreen ))==null?'':_.escape(__t))+
+((__t=( PhonesHelper.checkmark(get('display').touchScreen) ))==null?'':_.escape(__t))+
 '</dd>\n    </dl>\n</li>\n\n<li>\n    <span>Hardware</span>\n    <dl>\n        <dt>CPU</dt>\n        <dd>'+
 ((__t=( get('hardware').cpu ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>USB</dt>\n        <dd>'+
@@ -119,9 +119,9 @@ __p+='\n        <dt>Weight</dt>\n        <dd>'+
 '</dd>\n        <dt>Audio / headphone jack</dt>\n        <dd>'+
 ((__t=( get('hardware').audioJack ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>FM Radio</dt>\n        <dd>'+
-((__t=( get('hardware').fmRadio ))==null?'':_.escape(__t))+
+((__t=( PhonesHelper.checkmark(get('hardware').fmRadio) ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>Accelerometer</dt>\n        <dd>'+
-((__t=( get('hardware').accelerometer ))==null?'':_.escape(__t))+
+((__t=( PhonesHelper.checkmark(get('hardware').accelerometer) ))==null?'':_.escape(__t))+
 '</dd>\n    </dl>\n</li>\n\n<li>\n    <span>Camera</span>\n    <dl>\n        <dt>Primary</dt>\n        <dd>'+
 ((__t=( get('camera').primary ))==null?'':_.escape(__t))+
 '</dd>\n        <dt>Features</dt>\n        <dd>'+
