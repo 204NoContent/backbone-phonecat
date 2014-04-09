@@ -1,1 +1,5 @@
-Filter = Backbone.Model;
+Filter = Backbone.Model.extend({
+    defaults: {
+        sortBy: 'age'
+    }
+});

@@ -6,11 +6,16 @@ PhonesIndexListView = Backbone.View.extend({
 
         this.render();
 
+        this.listenTo(this.model, 'change:sortBy', this.rerender);
         this.listenTo(this.model, 'change:query', this.render);
     },
 
     render: function () {
         var filtered_phones = this.collection.query(this.model.get('query'));
+        filtered_phones = _.sortBy(filtered_phones, function (phone) {
+            var attr_value = phone.get(this.model.get('sortBy'));
+            return _.isString(attr_value) ? attr_value.toLowerCase() : attr_value;
+        }, this);
         this.filtered_collection.set(filtered_phones);
     },
 
@@ -26,5 +31,10 @@ PhonesIndexListView = Backbone.View.extend({
         } else {
             $(this.$('li')[position - 1]).after(this.phoneView.el);
         }
+    },
+
+    rerender: function () {
+        this.filtered_collection.set();
+        this.render();
     }
 });
