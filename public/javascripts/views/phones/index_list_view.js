@@ -1,18 +1,30 @@
 PhonesIndexListView = Backbone.View.extend({
 
     initialize: function () {
+        this.filtered_collection = new PhonesCollection();
+        this.listenTo(this.filtered_collection, 'add', this.renderPhone);
+
         this.render();
+
+        this.listenTo(this.model, 'change:query', this.render);
     },
 
     render: function () {
-        this.$el.html('');
-        this.collection.each(this.renderPhone, this);
+        var filtered_phones = this.collection.query(this.model.get('query'));
+        this.filtered_collection.set(filtered_phones);
     },
 
     renderPhone: function (phone) {
-        this.$el.append(new PhonesIndexListPhoneView({
+        var position = this.filtered_collection.indexOf(phone);
+        this.phoneView = new PhonesIndexListPhoneView({
             tagName: 'li',
             model: phone
-        }).el);
+        });
+
+        if (position === 0) {
+            this.$el.prepend(this.phoneView.el);
+        } else {
+            $(this.$('li')[position - 1]).after(this.phoneView.el);
+        }
     }
 });
