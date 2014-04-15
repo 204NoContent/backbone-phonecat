@@ -12,14 +12,14 @@ __p+='\n        <option value="'+
 ((__t=( option.text ))==null?'':_.escape(__t))+
 '</option>\n    ';
  }) 
-__p+='\n</select>';
+__p+='\n</select>\n';
 }
 return __p;
 };
 window.JST["phones/index"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='<div class=\'container-fluid\'>\n    <div class=\'row-fluid\'>\n        <div class=\'span2 filter\'>\n        </div>\n        <div class=\'span10\'>\n            <ul class=\'phones\'></ul>\n        </div>\n    </div>\n</div>';
+__p+='<div class=\'container-fluid\'>\n    <div class=\'row-fluid\'>\n        <div class=\'span2 filter\'>\n        </div>\n        <div class=\'span10\'>\n            <ul class=\'phones\'></ul>\n        </div>\n    </div>\n</div>\n';
 }
 return __p;
 };
@@ -36,7 +36,7 @@ __p+='<a href="/phones/'+
 ((__t=( get('name') ))==null?'':_.escape(__t))+
 '</a>\n<p>'+
 ((__t=( get('snippet') ))==null?'':_.escape(__t))+
-'</p>';
+'</p>\n';
 }
 return __p;
 };
@@ -47,7 +47,7 @@ __p+='<div class=\'phone-images\'></div>\n<h1>'+
 ((__t=( get('name') ))==null?'':_.escape(__t))+
 '</h1>\n<p>'+
 ((__t=( get('description') ))==null?'':_.escape(__t))+
-'</p>\n<ul class=\'phone-thumbs\'></ul>\n<ul class=\'specs\'></ul>';
+'</p>\n<ul class=\'phone-thumbs\'></ul>\n<ul class=\'specs\'></ul>\n';
 }
 return __p;
 };
@@ -56,7 +56,7 @@ var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments
 with(obj||{}){
 __p+='<img src="'+
 ((__t=( '/' + get('path') ))==null?'':_.escape(__t))+
-'" class=\'phone\'>';
+'" class=\'phone\'>\n';
 }
 return __p;
 };
@@ -65,7 +65,7 @@ var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments
 with(obj||{}){
 __p+='<img src="'+
 ((__t=( '/' + get('path') ))==null?'':_.escape(__t))+
-'">';
+'">\n';
 }
 return __p;
 };
@@ -128,7 +128,7 @@ __p+='\n        <dt>Weight</dt>\n        <dd>'+
 ((__t=( get('camera').features.join(', ') ))==null?'':_.escape(__t))+
 '</dd>\n    </dl>\n</li>\n\n<li>\n    <span>Additional Features</span>\n    <dd>'+
 ((__t=( get('additionalFeatures') ))==null?'':_.escape(__t))+
-'</dd>\n</li>\n\n<li></li>';
+'</dd>\n</li>\n\n<li></li>\n';
 }
 return __p;
 };
